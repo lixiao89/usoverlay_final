@@ -1,0 +1,1 @@
+# USOverlay Configuration FileUSOVERLAY_DIR = '/Users/xiaoli/Desktop/slicer_module'# Configurations of OpenIGTLink #1OIGTL_01_PORT = 18944OIGTL_01_CONNECT_NAME = 'DataTransfer_Probe_0'OIGTL_01_DEVICE_NAME = 'OpenIGTLink_USProbe'
