@@ -1,0 +1,35 @@
+from __main__ import vtk, qt, ctk, slicer
+import unittest
+#
+# USOverlay
+#
+from USOverlayGUI import *
+
+class USOverlay(USOverlayGUI):
+    def __init__(self, parent):
+        USOverlayGUI.__init__(self,parent)
+        ScriptedLoadableModule.__init__(self, parent)
+        parent.title = "USOverlay"
+        parent.categories = ["IGT"]
+        parent.dependencies = []
+        parent.contributors = ["Xiao Li (Johns Hopkins University)",
+                               "Sungmin Kim (Johns Hopkins University)",
+                               "Peter Kazanzides (Johns Hopkins University)"]
+        parent.helpText = """
+            The USOverlay module implemented to diplay ultrasound transducer and ultrasound image plane on the 3D view with tracking information
+            """
+        parent.acknowledgementText = """
+            This file was originally developed by Xiao Li, Sungmin Kim and Peter Kazanzides. This work was supported by ... grant(grant #)."""
+        self.parent = parent
+
+#
+# USOverlayWidget
+#
+
+class USOverlayWidget(USOverlayGUIWidget):
+    #def __init__(self, parent = None):
+    
+    # USOverlayGUIWidget.__init__(self, parent)
+    def setup(self):
+        USOverlayGUIWidget.setup(self)
+    
