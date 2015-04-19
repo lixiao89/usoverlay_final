@@ -23,7 +23,7 @@ http://www.cisst.org/cisst/license.txt.
 
 #include "trackerSimulator.h"
 
-#define IS_SERVER 1  // make this 0 to run as a client
+#define IS_SERVER 0  // make this 0 to run as a client
 
 
 int main()
@@ -40,11 +40,11 @@ int main()
     // create components
     mtsOpenIGTLink * mtsOpenIGTLinkObj = new mtsOpenIGTLink("MyOpenIGTLink", 50.0 * cmn_ms);
 #if IS_SERVER
-    std::cout << "Running as OpenIGTLink server on port 18944" << std::endl;
-    mtsOpenIGTLinkObj->Configure("18944");
+    std::cout << "Running as OpenIGTLink server on port 18946" << std::endl;
+    mtsOpenIGTLinkObj->Configure("18947");
 #else
-    std::cout << "Running as OpenIGTLink client on port localhost:18944" << std::endl;
-    mtsOpenIGTLinkObj->Configure("localhost:18944");
+    std::cout << "Running as OpenIGTLink client on port localhost:18946" << std::endl;
+    mtsOpenIGTLinkObj->Configure("localhost:18947");
 #endif
     trackerSimulator * trackerSimulatorObj = new trackerSimulator("trackerSimulator", 50.0 * cmn_ms);
 

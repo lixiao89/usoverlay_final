@@ -36,6 +36,8 @@ http://www.cisst.org/cisst/license.txt.
 #include <QMainWindow>
 
 
+
+
 int main(int argc, char * argv[])
 {
     // log configuration
