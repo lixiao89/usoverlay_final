@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<tracker>
+  <controller port="COM3"
+              definitions="C:\projects\US Galil Robot\source\Clarity Polaris" />
+  <tools>
+    <tool name="RobotTip"
+          serial="34801403"
+		  definition ="8700339.rom">
+    </tool>
+	<tool name="RobotBase"
+          serial="3532DC02"
+		  definition ="8700349.rom">
+    </tool>
+  </tools>
+</tracker>

@@ -1,0 +1,153 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0110 
+header_name {.h} 
+code_name {.cxx}
+class ClarityUI {open
+} {
+  Function {ClarityUI()} {open
+  } {
+    Fl_Window DisplayWindow {
+      label ClarityClient open
+      xywh {694 154 476 250} type Double color 7 selection_color 31 visible
+    } {
+      Fl_Group {} {open
+        image {polaris.jpg} xywh {5 56 465 187} box PLASTIC_UP_FRAME color 222 align 65
+      } {
+        Fl_Group {} {
+          label {Robot Tip} open
+          xywh {70 154 394 81} box PLASTIC_UP_FRAME color 222 labelfont 1 labelsize 16 align 196
+        } {
+          Fl_Box {} {
+            label Position
+            xywh {88 166 75 22}
+          }
+          Fl_Value_Output {TipPosition[0]} {
+            label { }
+            xywh {157 165 77 25} box PLASTIC_THIN_UP_BOX color 174 labelfont 1 minimum -1e+006 maximum 1e+006
+          }
+          Fl_Value_Output {TipPosition[1]} {
+            label { }
+            xywh {246 165 77 25} box PLASTIC_THIN_UP_BOX color 174 labelfont 1 minimum -1e+006 maximum 1e+006
+          }
+          Fl_Value_Output {TipPosition[2]} {
+            label { }
+            xywh {334 165 77 25} box PLASTIC_THIN_UP_BOX color 174 labelfont 1 minimum -1e+006 maximum 1e+006
+          }
+          Fl_Value_Output {TipPosition[3]} {
+            xywh {157 198 77 25} box PLASTIC_THIN_UP_BOX color 245 minimum -1e+006 maximum 1e+006
+          }
+          Fl_Value_Output {TipPosition[4]} {
+            xywh {246 198 77 25} box PLASTIC_THIN_UP_BOX color 245 minimum -1e+006 maximum 1e+006
+          }
+          Fl_Value_Output {TipPosition[5]} {
+            xywh {335 196 77 25} box PLASTIC_THIN_UP_BOX color 245 minimum -1e+006 maximum 1e+006
+          }
+          Fl_Box {} {
+            label mm
+            xywh {411 166 45 25}
+          }
+          Fl_Box {} {
+            label Orientation
+            xywh {70 199 83 22}
+          }
+          Fl_Box {} {
+            label deg
+            xywh {414 195 45 25}
+          }
+        }
+        Fl_Group {} {
+          label {Robot Base} open
+          xywh {70 66 394 81} box PLASTIC_UP_FRAME color 222 labelfont 1 labelsize 16 align 132
+        } {
+          Fl_Box {} {
+            label Position
+            xywh {88 78 75 22}
+          }
+          Fl_Value_Output {BasePosition[0]} {
+            label { }
+            xywh {157 77 77 25} box PLASTIC_THIN_UP_BOX color 174 labelfont 1 minimum -1e+006 maximum 1e+006
+          }
+          Fl_Value_Output {BasePosition[1]} {
+            label { }
+            xywh {246 77 77 25} box PLASTIC_THIN_UP_BOX color 174 labelfont 1 minimum -1e+006 maximum 1e+006
+          }
+          Fl_Value_Output {BasePosition[2]} {
+            label { }
+            xywh {334 77 77 25} box PLASTIC_THIN_UP_BOX color 174 labelfont 1 minimum -1e+006 maximum 1e+006
+          }
+          Fl_Value_Output {BasePosition[3]} {
+            xywh {157 110 77 25} box PLASTIC_THIN_UP_BOX color 245 minimum -1e+006 maximum 1e+006
+          }
+          Fl_Value_Output {BasePosition[4]} {
+            xywh {246 110 77 25} box PLASTIC_THIN_UP_BOX color 245 minimum -1e+006 maximum 1e+006
+          }
+          Fl_Value_Output {BasePosition[5]} {
+            xywh {335 108 77 25} box PLASTIC_THIN_UP_BOX color 245 minimum -1e+006 maximum 1e+006
+          }
+          Fl_Box {} {
+            label mm
+            xywh {411 78 45 25}
+          }
+          Fl_Box {} {
+            label Orientation
+            xywh {70 111 83 22}
+          }
+          Fl_Box {} {
+            label deg
+            xywh {414 107 45 25}
+          }
+        }
+      }
+      Fl_Group {} {open selected
+        xywh {5 248 465 113} box PLASTIC_UP_FRAME color 222 align 68 hide deactivate
+      } {
+        Fl_Input ServerIP {
+          label {Server IP} selected
+          xywh {183 262 281 34}
+        }
+        Fl_Input PortNumber {
+          label {Port Number} selected
+          xywh {207 306 257 34}
+        }
+        Fl_Button ConnectButton {
+          callback {ConnectButtonClicked = true;} selected
+          image {network.png} xywh {13 257 102 92} box THIN_DOWN_BOX color 7 selection_color 7 align 16 hotspot
+        }
+      }
+      Fl_Button beepButton {
+        label Beep
+        callback {beepClicked = true;} selected
+        xywh {7 9 70 40} box PLASTIC_THIN_UP_BOX color 135
+      }
+      Fl_Button initializeButton {
+        label Initialize
+        callback {initializeClicked = true;}
+        xywh {320 8 70 40} box PLASTIC_THIN_UP_BOX color 183
+      }
+      Fl_Button trackButton {
+        label Track
+        callback {trackClicked = true;}
+        xywh {398 7 70 40} box PLASTIC_THIN_UP_BOX color 63
+      }
+      Fl_Spinner beepCount {
+        xywh {88 15 70 30} labelsize 16 maximum 10 value 3 textsize 16
+      }
+    }
+    code {//set defaults
+ConnectButtonClicked = false;
+beepClicked = false;
+initializeClicked = false;
+trackClicked = false;} {}
+  }
+  decl {bool ConnectButtonClicked;} {public
+  }
+  Function {show(int argc, char** argv)} {} {
+    code {DisplayWindow->show();} {}
+  }
+  decl {bool beepClicked;} {public
+  }
+  decl {bool initializeClicked;} {public
+  }
+  decl {bool trackClicked;} {public
+  }
+} 

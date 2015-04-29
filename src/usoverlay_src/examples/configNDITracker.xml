@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<tracker>
+    <controller port="/dev/cu.usbserial-FTDY29FV"
+              definitions="" />
+  <tools>
+    <tool name="RobotTip"
+          serial="34801403"
+		  definition ="8700339.rom">
+    </tool>
+	<tool name="RobotBase"
+          serial="3532DC02"
+		  definition ="8700449.rom">
+    </tool>
+  </tools>
+</tracker>
