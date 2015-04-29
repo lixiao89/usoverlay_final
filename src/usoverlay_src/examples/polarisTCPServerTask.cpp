@@ -72,7 +72,7 @@ void polarisTCPServerTask::Run(void){
     //std::cerr<<"receiving";
 
     std::cout<<"Server Connected!!"<<std::endl;
-    bytesRead = socket->Receive((char *)&buffer, sizeof(buffer), 1*cmn_s); 
+    bytesRead = socket->Receive((char *)&buffer, sizeof(buffer), 0.5*cmn_s); 
     if (bytesRead > 0 &&(buffer.toolType==2 || buffer.toolType==4)) {
       vct4 quaternionInput(buffer.qx,buffer.qy,buffer.qz,buffer.qw);
       if(quaternionInput.SumOfElements()!=0.0)
