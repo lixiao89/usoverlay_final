@@ -1,2 +1,0 @@
-/usr/bin/ar cr libsawOpenIGTLink-dev.a  CMakeFiles/sawOpenIGTLink-dev.dir/mtsOpenIGTLink.o
-/usr/bin/ranlib libsawOpenIGTLink-dev.a

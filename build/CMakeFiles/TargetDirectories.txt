@@ -1,3 +1,0 @@
-/home/xli4217/Desktop/usoverlay/build/examples/CMakeFiles/NDITracker.dir
-/home/xli4217/Desktop/usoverlay/build/code/CMakeFiles/sawOpenIGTLink-dev.dir
-/home/xli4217/Desktop/usoverlay/build/examples/CMakeFiles/sawOpenIGTLinkExample.dir
