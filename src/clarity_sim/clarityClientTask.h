@@ -11,6 +11,7 @@
 class clarityClientTask : public mtsTaskPeriodic {
   CMN_DECLARE_SERVICES(CMN_NO_DYNAMIC_CREATION, CMN_LOG_LOD_RUN_DEBUG);  // log level
 
+
  public:
   clarityClientTask(const std::string & taskName, double period, unsigned short cport);
   ~clarityClientTask(void);

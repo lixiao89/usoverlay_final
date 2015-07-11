@@ -121,7 +121,7 @@ int main(int argc, char * argv[])
     }
     componentManager->AddComponent(componentCollector);
     componentCollector->Connect();
-    componentManager->Connect(componentControllerQtComponent->GetName(), "DataCollector",                              componentCollector->GetName(), "Control");
+    componentManager->Connect(componentControllerQtComponent->GetName(), "DataCollector", componentCollector->GetName(), "Control");
 
     // create and start all components
     componentManager->CreateAllAndWait(5.0 * cmn_s);

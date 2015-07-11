@@ -7,9 +7,8 @@ CMN_IMPLEMENT_SERVICES(clarityClientTask);
 clarityClientTask::clarityClientTask(const std::string & taskName, double period, unsigned short cport): mtsTaskPeriodic(taskName, period, false, 1000),socket(osaSocket::TCP){
 	isClientConnected = false;
 	isConnectionDataReceived = false;
-	//host = "127.0.0.1";
-	host = "10.188.174.206";
-	//host = "10.162.34.10";
+    // ip of server
+    host = "10.162.34.218";
 	//port = 8089;
 	port = cport;
 	msglen = 80;
